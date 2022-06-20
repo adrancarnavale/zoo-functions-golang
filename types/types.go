@@ -51,4 +51,14 @@ type (
 		Open  int `json:"open"`
 		Close int `json:"close"`
 	}
+
+	AnimalCounterInput struct {
+		Specie *string `json:"specie"`
+		Sex    *string `json:"sex"`
+	}
+
+	AnimalCounterOutput struct {
+		Specie   string `json:"specie"`
+		Quantity int    `json:"quantity"`
+	}
 )
