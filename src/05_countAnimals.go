@@ -1,7 +1,6 @@
 package src
 
 import (
-	"fmt"
 	"strings"
 	"zoologic/data"
 	"zoologic/types"
@@ -28,10 +27,9 @@ func CountAnimals(animal *types.AnimalCounterInput) []types.AnimalCounterOutput 
 	}
 
 	if animal.Sex == nil {
-		fmt.Println("here")
 		for _, specie := range data.Zoo.Species {
-			temp := *animal.Specie
-			if strings.EqualFold(specie.Name, temp) {
+			tempSpecie := *animal.Specie
+			if strings.EqualFold(specie.Name, tempSpecie) {
 				animalTotalQuantity := types.AnimalCounterOutput{Specie: specie.Name, Quantity: len(specie.Residents)}
 				animalsCounter = append(animalsCounter, animalTotalQuantity)
 			}

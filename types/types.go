@@ -61,4 +61,45 @@ type (
 		Specie   string `json:"specie"`
 		Quantity int    `json:"quantity"`
 	}
+
+	EntrantInput struct {
+		Name string `json:"name"`
+		Age  int    `json:"age"`
+	}
+
+	EntrantOutput struct {
+		Child  int `json:"child"`
+		Adult  int `json:"adult" `
+		Senior int `json:"senior"`
+	}
+
+	GetAnimalsMapInput struct {
+		IncludeNames *bool   `json:"includeNames"`
+		Sex          *string `json:"sex"`
+		Sorted       *bool   `json:"sorted"`
+	}
+
+	MappedAnimals struct {
+		NE []Animal `json:"ne"`
+		NW []Animal `json:"nw"`
+		SE []Animal `json:"se"`
+		SW []Animal `json:"sw"`
+	}
+
+	Animal struct {
+		Specie    string   `json:"name"`
+		Residents []string `json:"residents"`
+	}
+
+	AnimalsNames struct {
+		Lions     []string `json:"residents"`
+		Giraffes  []string `json:"giraffes"`
+		Tigers    []string `json:"tigers"`
+		Bears     []string `json:"bears"`
+		Elephants []string `json:"elephants"`
+		Penguins  []string `json:"penguins"`
+		Otters    []string `json:"otters"`
+		Frogs     []string `json:"frogs"`
+		Snakes    []string `json:"snakes"`
+	}
 )
