@@ -102,4 +102,19 @@ type (
 		Frogs     []string `json:"frogs"`
 		Snakes    []string `json:"snakes"`
 	}
+
+	ZooDailyAgenda struct {
+		OfficeHour string   `json:"officeHour"`
+		Exhibition []string `json:"exhibition"`
+	}
+
+	ZooSchedule struct {
+		Tuesday   ZooDailyAgenda `json:"tuesday"`
+		Wednesday ZooDailyAgenda `json:"wednesday"`
+		Thursday  ZooDailyAgenda `json:"thursday"`
+		Friday    ZooDailyAgenda `json:"friday"`
+		Saturday  ZooDailyAgenda `json:"saturday"`
+		Sunday    ZooDailyAgenda `json:"sunday"`
+		Monday    ZooDailyAgenda `json:"monday"`
+	}
 )
