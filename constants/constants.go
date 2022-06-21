@@ -20,3 +20,7 @@ const (
 	ArdithId    = "c1f50212-35a6-4ecd-8223-f835538526c2"
 	EmeryId     = "b0dc644a-5335-489b-8a2c-4e086c7819a2"
 )
+
+var (
+	DaysOfTheWeek = []string{"Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
+)

@@ -1,16 +1,7 @@
 package types
 
 type (
-	Hours struct {
-		Tuesday   Day `json:"tuesday"`
-		Wednesday Day `json:"wednesday"`
-		Thursday  Day `json:"thursday"`
-		Friday    Day `json:"friday"`
-		Saturday  Day `json:"saturday"`
-		Sunday    Day `json:"sunday"`
-		Monday    Day `json:"monday"`
-	}
-
+	Hours  map[string]Day
 	Prices struct {
 		Adult  float64 `json:"adult"`
 		Senior float64 `json:"senior"`
@@ -101,20 +92,5 @@ type (
 		Otters    []string `json:"otters"`
 		Frogs     []string `json:"frogs"`
 		Snakes    []string `json:"snakes"`
-	}
-
-	ZooDailyAgenda struct {
-		OfficeHour string   `json:"officeHour"`
-		Exhibition []string `json:"exhibition"`
-	}
-
-	ZooSchedule struct {
-		Tuesday   ZooDailyAgenda `json:"tuesday"`
-		Wednesday ZooDailyAgenda `json:"wednesday"`
-		Thursday  ZooDailyAgenda `json:"thursday"`
-		Friday    ZooDailyAgenda `json:"friday"`
-		Saturday  ZooDailyAgenda `json:"saturday"`
-		Sunday    ZooDailyAgenda `json:"sunday"`
-		Monday    ZooDailyAgenda `json:"monday"`
 	}
 )
